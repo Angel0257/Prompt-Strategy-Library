@@ -71,4 +71,57 @@ Rules:
 - If uncertain, choose the closest matching label
 
 Output format:
-<label>
+
+---
+
+## 6. Before / After Comparison
+**Without Label Locking**
+Output varies across runs
+Occasional new labels appear
+Explanatory text mixed with labels
+**With Label Locking**
+Stable label selection across runs
+Zero label invention
+Clean outputs suitable for automation
+
+---
+
+## 7. Evaluation Signals
+
+This strategy can be evaluated using lightweight metrics:
+Label Set Compliance Rate
+Cross-run Consistency
+Invalid Output Rate
+Human Review Correction Frequency
+Even small-scale manual testing (10–20 samples) is sufficient
+to observe improvements.
+
+---
+
+## 8. Trade-offs and Limitations
+
+May reduce nuance in borderline cases
+Forces decisions where ambiguity exists
+Should be combined with boundary clarification strategies
+when label definitions overlap heavily
+
+---
+
+## 9. Applicable Scenarios
+
+Dataset annotation pipelines
+AI-assisted moderation systems
+Large-scale tagging workflows
+Prompt-driven data preprocessing
+
+---
+
+## 10. Related Strategies
+
+Boundary Clarification
+
+Output Schema Enforcement
+
+Uncertainty Expression Control
+---
+
