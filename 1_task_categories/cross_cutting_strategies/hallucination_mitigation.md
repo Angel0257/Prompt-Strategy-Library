@@ -1,9 +1,7 @@
 # Strategy: Hallucination Mitigation
 
 ## 1. Strategy Overview
-Hallucination Mitigation prevents the model from generating fabricated,
-unsupported, or misleading information by applying explicit constraints,
-uncertainty handling, and output control.
+Hallucination Mitigation prevents the model from generating fabricated, unsupported, or misleading information by applying explicit constraints, uncertainty handling, and output control.
 
 ---
 
@@ -26,9 +24,9 @@ uncertainty handling, and output control.
 ---
 
 ## 4. Design Rationale
-- **Explicit Uncertainty Handling:** Output "Unknown" when unsure  
-- **Absolute Prohibition of Unsupported Content:** Do not fabricate  
-- **Evidence Requirement:** Only use context or verified sources  
+- **Explicit Uncertainty Handling:** Output "Unknown" when unsure
+- **Absolute Prohibition of Unsupported Content:** Do not fabricate
+- **Evidence Requirement:** Only use context or verified sources
 - **Structured Output:** Separate answers from commentary
 
 ---
@@ -47,49 +45,39 @@ Rules:
 
 Example output:
 <Answer>
-6. Before / After Comparison
+```
+
+## 6. Before / After Comparison
+
 Without Hallucination Mitigation
 
-Outputs include invented details or references
-
-Confident tone hides uncertainty
-
-Downstream automation or QA is error-prone
+- Outputs include invented details or references
+- Confident tone hides uncertainty
+- Downstream automation or QA is error-prone
 
 With Hallucination Mitigation
 
-Clearly outputs “Unknown” when uncertain
+- Clearly outputs "Unknown" when uncertain
+- Avoids any fabricated content
+- Structured output suitable for automation
+- Consistent across multiple runs
 
-Avoids any fabricated content
+## 7. Evaluation Signals
 
-Structured output suitable for automation
+- Unknown Usage Rate – % of cases where model correctly outputs "Unknown"
+- Fabrication Rate – % of outputs containing unsupported content
+- Consistency Across Runs – same input produces same valid/Unknown output
+- Human Review Correction Frequency – reduced need for manual correction
 
-Consistent across multiple runs
+## 8. Applicable Scenarios
 
-7. Evaluation Signals
+- Customer support / helpdesk bots
+- Knowledge base generation
+- Educational content summarization
+- Any LLM workflow requiring factual reliability
 
-Unknown Usage Rate – % of cases where model correctly outputs “Unknown”
+## 9. Related Strategies
 
-Fabrication Rate – % of outputs containing unsupported content
-
-Consistency Across Runs – same input produces same valid/Unknown output
-
-Human Review Correction Frequency – reduced need for manual correction
-
-8. Applicable Scenarios
-
-Customer support / helpdesk bots
-
-Knowledge base generation
-
-Educational content summarization
-
-Any LLM workflow requiring factual reliability
-
-9. Related Strategies
-
-Output Schema Enforcement
-
-Constraint Layering
-
-Uncertainty Expression Control
+- Output Schema Enforcement
+- Constraint Layering
+- Uncertainty Expression Control
