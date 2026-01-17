@@ -1,7 +1,5 @@
 
-# Strategy: Hallucination Mitigation
-
-# 消除幻觉
+# Strategy: Hallucination Mitigation 消除幻觉
 
 ---
 
@@ -14,9 +12,7 @@ The core goal is not to maximize answers, but to **maximize correctness by allow
 
 ---
 
-## 2. Target Task Types
-
-### 适用任务类型
+## 2. Target Task Types 适用任务类型
 
 该策略更适合 **LLM 作为“系统组件”而非“创作助手”** 的场景。
 
@@ -28,9 +24,7 @@ The core goal is not to maximize answers, but to **maximize correctness by allow
 
 ---
 
-## 3. Common Failure Modes Addressed
-
-### 主要对抗的模型失效模式
+## 3. Common Failure Modes Addressed 主要对抗的模型失效模式
 
 | Failure Mode           | Description                          | 中文解释    |
 | ---------------------- | ----------------------------------------- | ----------- |
@@ -86,7 +80,37 @@ Output Format:
 
 Do not include explanations, reasoning steps, or additional commentary.
 ```
+### 中文 ver1
 
+```text
+
+task：
+基于输入信息生成严格可验证的事实性回答。
+若无法在现有信息下确定答案，必须选择拒答。
+
+constraints：
+1. 仅使用输入中明确提供的信息。
+2. 禁止使用任何先验知识、常识或假设。
+3. 禁止编造任何事实、实体、事件或引用。
+4. 禁止对缺失信息进行推断或补全。
+5. 若信息不足以支撑答案，输出 "Unknown"。
+
+- 所有答案必须能在输入中找到直接依据。
+- 若证据缺失或存在歧义，输出 "Unknown"。
+- 禁止引用输入中未出现的来源或资料。
+
+"Unknown" 是一种合法且优先的输出结果。
+当无法确保准确性时，不得尝试猜测或近似回答。
+
+- 不展示任何推理过程。
+- 不解释答案来源。
+- 不添加额外说明、提示或建议。
+
+部分问题表面可回答，但实际上缺乏证据。
+在此情况下，必须输出 "Unknown"。
+
+
+```
 ---
 
 ## 6. Advanced Variants
@@ -132,8 +156,7 @@ Inject borderline examples where refusal is correct.
 
 ---
 
-## 8. Evaluation Signals
-### 评估指标
+## 8. Evaluation Signals 评估指标
 
 | Metric                | Description |
 | --------------------- | ----------- |
@@ -146,9 +169,7 @@ Inject borderline examples where refusal is correct.
 
 ---
 
-## 9. Related Prompt Strategies
-
-### 关联策略
+## 9. Related Prompt Strategies 关联策略
 
 * Constraint Layering 多层约束
 * Verification Prompting 验证型提示
