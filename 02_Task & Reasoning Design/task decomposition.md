@@ -47,3 +47,15 @@ Based on the results from Steps 1-3, generate a strict JSON object. Do not add a
   "category": "",
   "summary": ""
 }
+
+---
+## 4. Examples
+**task:** 判断这篇文章是否存在事实错误
+
+**expected output:**
+1. 提取文章中的所有事实性陈述
+2. 判断每条陈述是否可验证
+3. 对可验证陈述进行事实核查
+4. 汇总核查结果并给出结论
+
+---
