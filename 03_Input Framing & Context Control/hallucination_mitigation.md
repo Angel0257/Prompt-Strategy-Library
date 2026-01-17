@@ -1,4 +1,4 @@
-# Strategy: Hallucination Mitigation
+# Strategy: Hallucination Mitigation 消除幻觉
 
 ## 1. Strategy Overview
 Hallucination Mitigation prevents the model from generating fabricated, unsupported, or misleading information by applying explicit constraints, uncertainty handling, and output control.
