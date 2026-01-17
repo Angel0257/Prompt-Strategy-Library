@@ -1,14 +1,10 @@
-## 思维链
-
-Thinking Chain（链式推理）通过显式展开模型的中间推理步骤，使模型在执行复杂子任务时保持逻辑连贯，降低跳步推理和隐藏错误。
-
-English
+## Overview
+思维链通过显式展开模型的中间推理步骤，使模型在执行复杂子任务时保持逻辑连贯，降低跳步推理和隐藏错误。
 Thinking Chain improves reasoning quality by explicitly expanding intermediate reasoning steps, reducing logical jumps and hidden errors during task execution.
 
-一句话核心定义（非常关键）
+**Thinking Chain is about HOW the model reasons, not WHAT the task is.**
 
-Thinking Chain is about HOW the model reasons, not WHAT the task is.
-链式推理解决的是“怎么想”，而不是“做什么”。
+---
 
 ## prompt
 
@@ -44,5 +40,10 @@ Thinking Chain is about HOW the model reasons, not WHAT the task is.
 纯事实检索
 强约束输出任务
 高风险幻觉场景（配合 verification）
+
+---
+
+## Examples in different scenario
+...
 
 ---
